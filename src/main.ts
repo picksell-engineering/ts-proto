@@ -1381,7 +1381,7 @@ function generateNestjsServiceClient(
     }
 
     // Return observable since nestjs client always returns an Observable
-    requestFn = requestFn.returns(responseObservable(typeMap, methodDesc, options));
+    requestFn = requestFn.returns(responseType(typeMap, methodDesc, options));
 
     service = service.addFunction(requestFn);
 
